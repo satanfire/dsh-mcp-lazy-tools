@@ -1,0 +1,53 @@
+{
+  "name": "@satanfire/dsh-mcp-lazy-tools",
+  "version": "1.0.0",
+  "description": "Lazy loading for MCP tools in DeepSeek Harness: hide MCP schemas by default and unlock one server per agent on demand.",
+  "type": "module",
+  "license": "MIT",
+  "author": "satanfire",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satanfire/dsh-mcp-lazy-tools.git"
+  },
+  "homepage": "https://github.com/satanfire/dsh-mcp-lazy-tools#readme",
+  "bugs": {
+    "url": "https://github.com/satanfire/dsh-mcp-lazy-tools/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "mcp",
+    "lazy-loading"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "check": "node --check index.js"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

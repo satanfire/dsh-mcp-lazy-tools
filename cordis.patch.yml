@@ -1,0 +1,4 @@
+- insert:
+    - id: mcp-lazy-tools
+      name: '@satanfire/dsh-mcp-lazy-tools'
+      config: {}
